@@ -17,10 +17,12 @@ connectDB()
 
 
 
-// Route
+// Route 
 app.use("/tasks", require("./routes/taskRouter.js"))
 
 __dirname = path.resolve()
+
+
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "client", "build"))) 
